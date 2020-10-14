@@ -19,9 +19,6 @@ from flask_pymongo import PyMongo
 
 
 
-# In[23]:
-
-
 #link to chromedriver
 def init_browser():
  executable_path = {'executable_path': '/Users/asna_/Desktop/chromedriver.exe'}
@@ -35,7 +32,7 @@ def init_browser():
 
 #URL of the NASA page which is scraped
 def scrape():
-    Browser=init_browser()
+    browser=init_browser()
     mars_data={}
     url = 'https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest'
     browser.visit(url)
