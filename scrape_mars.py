@@ -78,7 +78,7 @@ def scrape():
     # Use Splinter to navigate the following site and find the image
     image_url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
     browser.visit(image_url)
-
+    time.sleep(2)
 
     # In[9]:
 
@@ -183,15 +183,15 @@ def scrape():
         hemidic.append(hemi)
         browser.back()
 
-    mars_data={
+    mars_info={
         "news_title":news_title,
         "news_p":News_p,
         "featured_image_url":featured_image_url,
-        "mars_fact":str(mars_facts),
+        "mars_fact":str(mars_fact),
         "hemidic":hemidic
     }
-    Browser.quit()
-    return mars_data
+    browser.quit()
+    return mars_info
 
 # In[ ]:
 
